@@ -1,0 +1,23 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Sprint2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrandonConnolly/FullStackSprint2.git#main"
+  },
+  "author": "Brandon Connolly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrandonConnolly/FullStackSprint2/issues"
+  },
+  "homepage": "https://github.com/BrandonConnolly/FullStackSprint2/tree/main#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
