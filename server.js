@@ -9,6 +9,7 @@ const flash = require("express-flash");
 const session = require("express-session");
 const methodOverride = require("method-override");
 const uuid = require("uuid");
+const path = require("path"); //!!!!!!!!!!!!!!!!!!!!!
 //const logins = require("./services/p.logins.dal"); // use POSTGRESQL dal
 //const logins = require('./services/m.logins.dal') // use MONGODB dal
 const app = express();
@@ -51,7 +52,7 @@ passport.deserializeUser(async (id, done) => {
   done(null, user);
 });
 
-app.set("view-engine", "ejs");
+app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 app.use(flash());
 app.use(
