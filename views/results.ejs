@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1>Search engine<h1>
+        
+    <form action="/search" method="post">
+        <select name="tab">
+            <option value="postgres" <%= (tab === 'postgres') ? 'selected' : '' %>>PostgreSQL</option>
+            <option value="mongodb" <%= (tab === 'mongodb') ? 'selected' : '' %>>MongoDB</option>
+            <option value="both" <%= (tab === 'both') ? 'selected' : '' %>>Both</option>    
+        </select>
+    
+        <input type="text" name="searchTerm" placeholder="Search...">
+        <button type="submit">Search</button>
+    </form>
+
+    <h2>Search Results</h2>
+    <ul>
+        <% results.forEach(result => { %>
+            <li><%= `${result.plant_common_name}, ${result.plant_family}, ${result.plant_scientific_name}` %></li>
+        <% }); %>
+    </ul>
+</body>
+</html>
