@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+    <h1>Search engine<h1>
+        
+    <form action="/searchBar" method="post">
+        <select name="tab">
+            <option value="postgres" <%= (tab === 'postgres') ? 'selected' : '' %>>PostgreSQL</option>
+            <option value="mongodb" <%= (tab === 'mongodb') ? 'selected' : '' %>>MongoDB</option>
+            <option value="both" <%= (tab === 'both') ? 'selected' : '' %>>Both</option>
+        </select>
+        <input type="text" name="searchTerm" placeholder="Search...">
+        <button type="submit">Search</button>
+    </form>
+
+</body>
+</html>
